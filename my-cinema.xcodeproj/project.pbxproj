@@ -10,12 +10,12 @@
 		3707415829C5007A00FD9493 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707415729C5007A00FD9493 /* AppDelegate.swift */; };
 		3707415A29C5007A00FD9493 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707415929C5007A00FD9493 /* SceneDelegate.swift */; };
 		3707415C29C5007A00FD9493 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707415B29C5007A00FD9493 /* ViewController.swift */; };
-		3707415F29C5007A00FD9493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3707415D29C5007A00FD9493 /* Main.storyboard */; };
 		3707416129C5007A00FD9493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3707416029C5007A00FD9493 /* Assets.xcassets */; };
 		3707416429C5007A00FD9493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3707416229C5007A00FD9493 /* LaunchScreen.storyboard */; };
 		3707416F29C5007B00FD9493 /* my_cinemaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707416E29C5007B00FD9493 /* my_cinemaTests.swift */; };
 		3707417929C5007B00FD9493 /* my_cinemaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707417829C5007B00FD9493 /* my_cinemaUITests.swift */; };
 		3707417B29C5007B00FD9493 /* my_cinemaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707417A29C5007B00FD9493 /* my_cinemaUITestsLaunchTests.swift */; };
+		3707418A29C5017000FD9493 /* MCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707418929C5017000FD9493 /* MCTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 		3707415729C5007A00FD9493 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3707415929C5007A00FD9493 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3707415B29C5007A00FD9493 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3707415E29C5007A00FD9493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3707416029C5007A00FD9493 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3707416329C5007A00FD9493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3707416529C5007A00FD9493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		3707417429C5007B00FD9493 /* my-cinemaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "my-cinemaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3707417829C5007B00FD9493 /* my_cinemaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_cinemaUITests.swift; sourceTree = "<group>"; };
 		3707417A29C5007B00FD9493 /* my_cinemaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_cinemaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3707418929C5017000FD9493 /* MCTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +99,9 @@
 		3707415629C5007A00FD9493 /* my-cinema */ = {
 			isa = PBXGroup;
 			children = (
-				3707415729C5007A00FD9493 /* AppDelegate.swift */,
-				3707415929C5007A00FD9493 /* SceneDelegate.swift */,
+				3707418829C5010F00FD9493 /* Controller */,
+				3707418729C500C400FD9493 /* Resources */,
 				3707415B29C5007A00FD9493 /* ViewController.swift */,
-				3707415D29C5007A00FD9493 /* Main.storyboard */,
 				3707416029C5007A00FD9493 /* Assets.xcassets */,
 				3707416229C5007A00FD9493 /* LaunchScreen.storyboard */,
 				3707416529C5007A00FD9493 /* Info.plist */,
@@ -125,6 +124,23 @@
 				3707417A29C5007B00FD9493 /* my_cinemaUITestsLaunchTests.swift */,
 			);
 			path = "my-cinemaUITests";
+			sourceTree = "<group>";
+		};
+		3707418729C500C400FD9493 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3707415929C5007A00FD9493 /* SceneDelegate.swift */,
+				3707415729C5007A00FD9493 /* AppDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3707418829C5010F00FD9493 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3707418929C5017000FD9493 /* MCTabBarController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +249,6 @@
 			files = (
 				3707416429C5007A00FD9493 /* LaunchScreen.storyboard in Resources */,
 				3707416129C5007A00FD9493 /* Assets.xcassets in Resources */,
-				3707415F29C5007A00FD9493 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +276,7 @@
 				3707415C29C5007A00FD9493 /* ViewController.swift in Sources */,
 				3707415829C5007A00FD9493 /* AppDelegate.swift in Sources */,
 				3707415A29C5007A00FD9493 /* SceneDelegate.swift in Sources */,
+				3707418A29C5017000FD9493 /* MCTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +313,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3707415D29C5007A00FD9493 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3707415E29C5007A00FD9493 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3707416229C5007A00FD9493 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +450,6 @@
 				INFOPLIST_FILE = "my-cinema/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +477,6 @@
 				INFOPLIST_FILE = "my-cinema/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
