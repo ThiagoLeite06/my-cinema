@@ -19,6 +19,10 @@
 		3707418D29C5037100FD9493 /* MCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707418C29C5037100FD9493 /* MCService.swift */; };
 		3707418F29C5055800FD9493 /* MCRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707418E29C5055800FD9493 /* MCRequest.swift */; };
 		3707419129C505BA00FD9493 /* MCEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707419029C505BA00FD9493 /* MCEndpoint.swift */; };
+		3707419329C50A1700FD9493 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707419229C50A1700FD9493 /* MoviesViewController.swift */; };
+		3707419529C50A2B00FD9493 /* SeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707419429C50A2B00FD9493 /* SeriesViewController.swift */; };
+		3707419729C50A4200FD9493 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707419629C50A4200FD9493 /* FavoritesViewController.swift */; };
+		3707419929C50A5A00FD9493 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707419829C50A5A00FD9493 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		3707418C29C5037100FD9493 /* MCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCService.swift; sourceTree = "<group>"; };
 		3707418E29C5055800FD9493 /* MCRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCRequest.swift; sourceTree = "<group>"; };
 		3707419029C505BA00FD9493 /* MCEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCEndpoint.swift; sourceTree = "<group>"; };
+		3707419229C50A1700FD9493 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		3707419429C50A2B00FD9493 /* SeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewController.swift; sourceTree = "<group>"; };
+		3707419629C50A4200FD9493 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		3707419829C50A5A00FD9493 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +154,10 @@
 			isa = PBXGroup;
 			children = (
 				3707418929C5017000FD9493 /* MCTabBarController.swift */,
+				3707419229C50A1700FD9493 /* MoviesViewController.swift */,
+				3707419429C50A2B00FD9493 /* SeriesViewController.swift */,
+				3707419629C50A4200FD9493 /* FavoritesViewController.swift */,
+				3707419829C50A5A00FD9493 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -290,13 +302,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3707419529C50A2B00FD9493 /* SeriesViewController.swift in Sources */,
 				3707418D29C5037100FD9493 /* MCService.swift in Sources */,
 				3707415C29C5007A00FD9493 /* ViewController.swift in Sources */,
 				3707415829C5007A00FD9493 /* AppDelegate.swift in Sources */,
 				3707415A29C5007A00FD9493 /* SceneDelegate.swift in Sources */,
 				3707418A29C5017000FD9493 /* MCTabBarController.swift in Sources */,
+				3707419929C50A5A00FD9493 /* ProfileViewController.swift in Sources */,
 				3707419129C505BA00FD9493 /* MCEndpoint.swift in Sources */,
 				3707418F29C5055800FD9493 /* MCRequest.swift in Sources */,
+				3707419729C50A4200FD9493 /* FavoritesViewController.swift in Sources */,
+				3707419329C50A1700FD9493 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
