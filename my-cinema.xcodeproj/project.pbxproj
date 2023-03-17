@@ -16,6 +16,9 @@
 		3707417929C5007B00FD9493 /* my_cinemaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707417829C5007B00FD9493 /* my_cinemaUITests.swift */; };
 		3707417B29C5007B00FD9493 /* my_cinemaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707417A29C5007B00FD9493 /* my_cinemaUITestsLaunchTests.swift */; };
 		3707418A29C5017000FD9493 /* MCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707418929C5017000FD9493 /* MCTabBarController.swift */; };
+		3707418D29C5037100FD9493 /* MCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707418C29C5037100FD9493 /* MCService.swift */; };
+		3707418F29C5055800FD9493 /* MCRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707418E29C5055800FD9493 /* MCRequest.swift */; };
+		3707419129C505BA00FD9493 /* MCEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707419029C505BA00FD9493 /* MCEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		3707417829C5007B00FD9493 /* my_cinemaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_cinemaUITests.swift; sourceTree = "<group>"; };
 		3707417A29C5007B00FD9493 /* my_cinemaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_cinemaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3707418929C5017000FD9493 /* MCTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCTabBarController.swift; sourceTree = "<group>"; };
+		3707418C29C5037100FD9493 /* MCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCService.swift; sourceTree = "<group>"; };
+		3707418E29C5055800FD9493 /* MCRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCRequest.swift; sourceTree = "<group>"; };
+		3707419029C505BA00FD9493 /* MCEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		3707415629C5007A00FD9493 /* my-cinema */ = {
 			isa = PBXGroup;
 			children = (
+				3707418B29C5034700FD9493 /* APIClient */,
 				3707418829C5010F00FD9493 /* Controller */,
 				3707418729C500C400FD9493 /* Resources */,
 				3707415B29C5007A00FD9493 /* ViewController.swift */,
@@ -141,6 +148,16 @@
 				3707418929C5017000FD9493 /* MCTabBarController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		3707418B29C5034700FD9493 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				3707418C29C5037100FD9493 /* MCService.swift */,
+				3707418E29C5055800FD9493 /* MCRequest.swift */,
+				3707419029C505BA00FD9493 /* MCEndpoint.swift */,
+			);
+			path = APIClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,10 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3707418D29C5037100FD9493 /* MCService.swift in Sources */,
 				3707415C29C5007A00FD9493 /* ViewController.swift in Sources */,
 				3707415829C5007A00FD9493 /* AppDelegate.swift in Sources */,
 				3707415A29C5007A00FD9493 /* SceneDelegate.swift in Sources */,
 				3707418A29C5017000FD9493 /* MCTabBarController.swift in Sources */,
+				3707419129C505BA00FD9493 /* MCEndpoint.swift in Sources */,
+				3707418F29C5055800FD9493 /* MCRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
