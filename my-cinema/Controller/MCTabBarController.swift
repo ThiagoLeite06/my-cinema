@@ -15,7 +15,7 @@ class MCTabBarController: UITabBarController {
     }
     
     private func setupTabs() {
-        let movieVC = MoviesViewController()
+        let movieVC = MCMoviesViewController()
         let seriesVC = SeriesViewController()
         let favoritesVC = FavoritesViewController()
         let profileVC = ProfileViewController()

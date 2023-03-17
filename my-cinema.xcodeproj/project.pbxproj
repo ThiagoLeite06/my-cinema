@@ -19,10 +19,17 @@
 		3707418D29C5037100FD9493 /* MCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707418C29C5037100FD9493 /* MCService.swift */; };
 		3707418F29C5055800FD9493 /* MCRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707418E29C5055800FD9493 /* MCRequest.swift */; };
 		3707419129C505BA00FD9493 /* MCEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707419029C505BA00FD9493 /* MCEndpoint.swift */; };
-		3707419329C50A1700FD9493 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707419229C50A1700FD9493 /* MoviesViewController.swift */; };
+		3707419329C50A1700FD9493 /* MCMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707419229C50A1700FD9493 /* MCMoviesViewController.swift */; };
 		3707419529C50A2B00FD9493 /* SeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707419429C50A2B00FD9493 /* SeriesViewController.swift */; };
 		3707419729C50A4200FD9493 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707419629C50A4200FD9493 /* FavoritesViewController.swift */; };
 		3707419929C50A5A00FD9493 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707419829C50A5A00FD9493 /* ProfileViewController.swift */; };
+		3707419C29C50DD200FD9493 /* MCMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707419B29C50DD200FD9493 /* MCMovieResponse.swift */; };
+		3707419E29C50E0700FD9493 /* MCMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707419D29C50E0700FD9493 /* MCMovie.swift */; };
+		370741A129C50FA100FD9493 /* MCMovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370741A029C50FA100FD9493 /* MCMovieListView.swift */; };
+		370741A329C5101600FD9493 /* MCMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370741A229C5101600FD9493 /* MCMovieCollectionViewCell.swift */; };
+		370741A629C510B600FD9493 /* MCMovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370741A529C510B600FD9493 /* MCMovieListViewModel.swift */; };
+		370741A829C5127700FD9493 /* MCMovieCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370741A729C5127700FD9493 /* MCMovieCollectionViewCellViewModel.swift */; };
+		370741AA29C512F400FD9493 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370741A929C512F400FD9493 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,10 +66,17 @@
 		3707418C29C5037100FD9493 /* MCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCService.swift; sourceTree = "<group>"; };
 		3707418E29C5055800FD9493 /* MCRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCRequest.swift; sourceTree = "<group>"; };
 		3707419029C505BA00FD9493 /* MCEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCEndpoint.swift; sourceTree = "<group>"; };
-		3707419229C50A1700FD9493 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		3707419229C50A1700FD9493 /* MCMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCMoviesViewController.swift; sourceTree = "<group>"; };
 		3707419429C50A2B00FD9493 /* SeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewController.swift; sourceTree = "<group>"; };
 		3707419629C50A4200FD9493 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		3707419829C50A5A00FD9493 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3707419B29C50DD200FD9493 /* MCMovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCMovieResponse.swift; sourceTree = "<group>"; };
+		3707419D29C50E0700FD9493 /* MCMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCMovie.swift; sourceTree = "<group>"; };
+		370741A029C50FA100FD9493 /* MCMovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCMovieListView.swift; sourceTree = "<group>"; };
+		370741A229C5101600FD9493 /* MCMovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCMovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		370741A529C510B600FD9493 /* MCMovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCMovieListViewModel.swift; sourceTree = "<group>"; };
+		370741A729C5127700FD9493 /* MCMovieCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCMovieCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		370741A929C512F400FD9493 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +127,9 @@
 		3707415629C5007A00FD9493 /* my-cinema */ = {
 			isa = PBXGroup;
 			children = (
+				3707419A29C50DAB00FD9493 /* Model */,
+				3707419F29C50F7600FD9493 /* View */,
+				370741A429C5105B00FD9493 /* ViewModel */,
 				3707418B29C5034700FD9493 /* APIClient */,
 				3707418829C5010F00FD9493 /* Controller */,
 				3707418729C500C400FD9493 /* Resources */,
@@ -146,6 +163,7 @@
 			children = (
 				3707415929C5007A00FD9493 /* SceneDelegate.swift */,
 				3707415729C5007A00FD9493 /* AppDelegate.swift */,
+				370741A929C512F400FD9493 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -154,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				3707418929C5017000FD9493 /* MCTabBarController.swift */,
-				3707419229C50A1700FD9493 /* MoviesViewController.swift */,
+				3707419229C50A1700FD9493 /* MCMoviesViewController.swift */,
 				3707419429C50A2B00FD9493 /* SeriesViewController.swift */,
 				3707419629C50A4200FD9493 /* FavoritesViewController.swift */,
 				3707419829C50A5A00FD9493 /* ProfileViewController.swift */,
@@ -170,6 +188,33 @@
 				3707419029C505BA00FD9493 /* MCEndpoint.swift */,
 			);
 			path = APIClient;
+			sourceTree = "<group>";
+		};
+		3707419A29C50DAB00FD9493 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3707419B29C50DD200FD9493 /* MCMovieResponse.swift */,
+				3707419D29C50E0700FD9493 /* MCMovie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3707419F29C50F7600FD9493 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				370741A029C50FA100FD9493 /* MCMovieListView.swift */,
+				370741A229C5101600FD9493 /* MCMovieCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		370741A429C5105B00FD9493 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				370741A529C510B600FD9493 /* MCMovieListViewModel.swift */,
+				370741A729C5127700FD9493 /* MCMovieCollectionViewCellViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,14 +350,21 @@
 				3707419529C50A2B00FD9493 /* SeriesViewController.swift in Sources */,
 				3707418D29C5037100FD9493 /* MCService.swift in Sources */,
 				3707415C29C5007A00FD9493 /* ViewController.swift in Sources */,
+				370741AA29C512F400FD9493 /* Extensions.swift in Sources */,
+				3707419C29C50DD200FD9493 /* MCMovieResponse.swift in Sources */,
 				3707415829C5007A00FD9493 /* AppDelegate.swift in Sources */,
+				370741A829C5127700FD9493 /* MCMovieCollectionViewCellViewModel.swift in Sources */,
 				3707415A29C5007A00FD9493 /* SceneDelegate.swift in Sources */,
+				3707419E29C50E0700FD9493 /* MCMovie.swift in Sources */,
 				3707418A29C5017000FD9493 /* MCTabBarController.swift in Sources */,
 				3707419929C50A5A00FD9493 /* ProfileViewController.swift in Sources */,
 				3707419129C505BA00FD9493 /* MCEndpoint.swift in Sources */,
 				3707418F29C5055800FD9493 /* MCRequest.swift in Sources */,
+				370741A329C5101600FD9493 /* MCMovieCollectionViewCell.swift in Sources */,
 				3707419729C50A4200FD9493 /* FavoritesViewController.swift in Sources */,
-				3707419329C50A1700FD9493 /* MoviesViewController.swift in Sources */,
+				370741A629C510B600FD9493 /* MCMovieListViewModel.swift in Sources */,
+				3707419329C50A1700FD9493 /* MCMoviesViewController.swift in Sources */,
+				370741A129C50FA100FD9493 /* MCMovieListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
