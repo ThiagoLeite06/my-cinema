@@ -8,10 +8,13 @@
 import Foundation
 
 final class MCMovieCollectionViewCellViewModel {
-    private let movieImage: URL?
     
-    init(movieImage: URL?){
+    let title: String
+    let movieImage: URL?
+    
+    init(title: String, movieImage: URL?){
         self.movieImage = movieImage
+        self.title = title
     }
     
     public func fetchImage(completion: @escaping (Result<Data, Error>) -> Void) {
@@ -26,7 +29,6 @@ final class MCMovieCollectionViewCellViewModel {
                 completion(.failure(error ?? URLError(.badServerResponse)))
                 return
             }
-            
             completion(.success(data))
         }
         task.resume()

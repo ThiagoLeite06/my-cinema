@@ -8,11 +8,12 @@
 import UIKit
 
 final class MCMovieListViewModel: NSObject {
+    
     func fetchMovies() {
         MCService.shared.execute(.listMoviesRequests, expecting: MCMovieResponse.self) { result in
             switch result {
             case .success(let model):
-                print(model.results.first?.cover ?? "No image")
+                print(model.results.count)
             case .failure(let error):
                 print(String(describing: error))
             }
@@ -27,10 +28,11 @@ extension MCMovieListViewModel: UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MCMovieCollectionViewCell.cellIdentifier,
-                                                            for: indexPath) as? MCMovieCollectionViewCell else {
-            fatalError("unsupported cell")
+            for: indexPath) as? MCMovieCollectionViewCell else {
+                fatalError("unsupported cell")
         }
-        let viewModel = MCMovieCollectionViewCellViewModel(movieImage: URL(string: "https://image.tmdb.org/t/p/w500/2Eewgp7o5AU1xCataDmiIL2nYxd.jpg"))
+        
+        let viewModel = MCMovieCollectionViewCellViewModel(title: "Teste", movieImage: URL(string: "https://image.tmdb.org/t/p/w500/2Eewgp7o5AU1xCataDmiIL2nYxd.jpg"))
         cell.configure(with: viewModel)
         return cell
     }
