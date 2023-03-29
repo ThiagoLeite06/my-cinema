@@ -8,6 +8,7 @@
 import UIKit
 
 class MCMovieCollectionViewCell: UICollectionViewCell {
+    
     static let cellIdentifier = "MCMovieCollectionViewCell"
     
     let imageView: UIImageView = {
@@ -22,7 +23,9 @@ class MCMovieCollectionViewCell: UICollectionViewCell {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
         title.textColor = .label
-        title.font = .systemFont(ofSize: 18, weight: .medium)
+        title.font = .systemFont(ofSize: 16, weight: .bold)
+        title.lineBreakMode = .byWordWrapping
+        title.numberOfLines = 2
         return title
     }()
     
@@ -40,15 +43,15 @@ class MCMovieCollectionViewCell: UICollectionViewCell {
     
     private func addConstraints() {
         NSLayoutConstraint.activate([
-            title.heightAnchor.constraint(equalToConstant: 50),
+            title.heightAnchor.constraint(equalToConstant: 70),
             title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
             title.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
-            title.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -3),
+            title.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
             
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             imageView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             imageView.bottomAnchor.constraint(equalTo: title.topAnchor, constant: -3),
-            imageView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+            imageView.rightAnchor.constraint(equalTo: contentView.rightAnchor)
         ])
     }
     

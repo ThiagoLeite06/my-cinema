@@ -9,20 +9,34 @@ import Foundation
 
 struct MCMovie: Codable {
     let adult: Bool
-    let backdrop_path: String
-    let genre_ids: [Int]
+    let backdropPath: String?
+    let genreIds: [Int]
     let id: Int
-    let original_language: String
-    let original_title: String
+    let originalLanguage: String
+    let originalTitle: String
     let overview: String
     let popularity: Float
-    let poster_path: String
-    let release_date: String
+    let posterPath: String
+    let releaseDate: String?
     let title: String
     let video: Bool
-    let vote_average: Double
-    let vote_count: Int
-    let cover: URL?    
+    let voteAverage: Double
+    let voteCount: Int
+    let cover: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case adult, video
+        case id
+        case overview, popularity, title,cover
+        case backdropPath = "backdrop_path"
+        case genreIds = "genre_ids"
+        case originalLanguage = "original_language"
+        case originalTitle = "original_title"
+        case posterPath = "poster_path"
+        case releaseDate = "release_date"
+        case voteAverage = "vote_average"
+        case voteCount = "vote_count"
+    }
 }
 
 struct Genre: Codable {

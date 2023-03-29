@@ -7,23 +7,51 @@
 
 import UIKit
 
+protocol MCMovieListViewModelDelegate: AnyObject {
+    func didLoadInitialCharacters()
+}
+
 final class MCMovieListViewModel: NSObject {
     
+    public weak var delegate: MCMovieListViewModelDelegate?
+
+    private var cellViewModels: [MCMovieCollectionViewCellViewModel] = []
+    
+    private var movies: [MCMovie] = [] {
+        didSet {
+            for movie in movies {
+                let viewModel = MCMovieCollectionViewCellViewModel(title: movie.title,
+                                                                   movieImageUrl: movie.backdropPath)
+                cellViewModels.append(viewModel)
+            }
+        }
+    }
+    
+   
+    
     func fetchMovies() {
-        MCService.shared.execute(.listMoviesRequests, expecting: MCMovieResponse.self) { result in
+        MCService.shared.execute(.listMoviesRequests,
+                                 expecting: MCMovieResponse.self) { [weak self] result in
             switch result {
-            case .success(let model):
-                print(model.results.count)
+            case .success(let responseModel):
+                let results = responseModel.results
+                self?.movies = results
+                DispatchQueue.main.async {
+                    self?.delegate?.didLoadInitialCharacters()
+                }
+                
             case .failure(let error):
                 print(String(describing: error))
             }
         }
     }
+    
+    
 }
 
 extension MCMovieListViewModel: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return cellViewModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -32,8 +60,7 @@ extension MCMovieListViewModel: UICollectionViewDataSource, UICollectionViewDele
                 fatalError("unsupported cell")
         }
         
-        let viewModel = MCMovieCollectionViewCellViewModel(title: "Teste", movieImage: URL(string: "https://image.tmdb.org/t/p/w500/2Eewgp7o5AU1xCataDmiIL2nYxd.jpg"))
-        cell.configure(with: viewModel)
+        cell.configure(with: cellViewModels[indexPath.row])
         return cell
     }
     

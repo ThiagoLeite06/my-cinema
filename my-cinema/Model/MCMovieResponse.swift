@@ -8,10 +8,10 @@
 import Foundation
 
 struct MCMovieResponse: Codable {
-    let page: Int?
+    let page: Int
     let results: [MCMovie]
-    let totalResults: Int?
-    let totalPages: Int?
+    let totalResults: Int
+    let totalPages: Int
 
     enum CodingKeys: String, CodingKey {
         case page, results

@@ -10,19 +10,25 @@ import Foundation
 final class MCMovieCollectionViewCellViewModel {
     
     let title: String
-    let movieImage: URL?
+    let movieImageUrl: String?
     
-    init(title: String, movieImage: URL?){
-        self.movieImage = movieImage
+    init(title: String, movieImageUrl: String?){
         self.title = title
+        self.movieImageUrl = movieImageUrl
     }
     
     public func fetchImage(completion: @escaping (Result<Data, Error>) -> Void) {
-        guard let url = movieImage else {
-            completion(.failure(URLError(.badURL)))
-            return
+      
+        guard let url = movieImageUrl else {
+           completion(.failure(URLError(.badURL)))
+           return
         }
-        let request = URLRequest(url: url)
+        
+        var preparedUrl: String {
+            return "https://www.themoviedb.org/t/p/w440_and_h660_face\(url)"
+        }
+        
+        guard let request = URL(string: preparedUrl) else { return }
         
         let task = URLSession.shared.dataTask(with: request) { data, _, error in
             guard let data = data, error == nil else {
@@ -32,5 +38,7 @@ final class MCMovieCollectionViewCellViewModel {
             completion(.success(data))
         }
         task.resume()
+
+        
     }
 }

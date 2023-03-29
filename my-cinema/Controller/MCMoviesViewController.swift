@@ -15,15 +15,15 @@ class MCMoviesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Filmes"
-        view.backgroundColor = .systemRed
         view.addSubview(movieListView)
         NSLayoutConstraint.activate([
             movieListView.topAnchor.constraint(equalTo: view.topAnchor),
             movieListView.leftAnchor.constraint(equalTo: view.leftAnchor),
             movieListView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            movieListView.rightAnchor.constraint(equalTo: view.rightAnchor  )
+            movieListView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ])
         movieListViewModel.fetchMovies()
+        movieListView.didLoadInitialCharacters()
         
     }
 }

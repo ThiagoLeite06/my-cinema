@@ -36,11 +36,9 @@ class MCMovieListView: UIView {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .systemBlue
         addSubviews(collectionView,spinner)
-        
         addConstraints()
-        
         spinner.startAnimating()
-        
+        viewModel.fetchMovies()
         setupCollectionView()
     }
     
@@ -58,25 +56,26 @@ class MCMovieListView: UIView {
             collectionView.topAnchor.constraint(equalTo: topAnchor),
             collectionView.leftAnchor.constraint(equalTo: leftAnchor),
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            collectionView.rightAnchor.constraint(equalTo: rightAnchor  )
+            collectionView.rightAnchor.constraint(equalTo: rightAnchor)
         ])
     }
     
     private func setupCollectionView() {
         collectionView.dataSource = viewModel
         collectionView.delegate = viewModel
-        
-        DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
-            self.spinner.stopAnimating()
-            self.collectionView.isHidden = false
-            
-            UIView.animate(withDuration: 0.4) {
-                self.collectionView.alpha = 1
-            }
-        })
     }
+}
+
+extension MCMovieListView: MCMovieListViewModelDelegate {
     
-    
+    func didLoadInitialCharacters() {
+        spinner.stopAnimating()
+        collectionView.isHidden = false
+        collectionView.reloadData() // Initial fetch
+        UIView.animate(withDuration: 0.4) {
+            self.collectionView.alpha = 1
+        }
+    }
 }
 
 
