@@ -26,6 +26,7 @@ class MCMovieCollectionViewCell: UICollectionViewCell {
         title.font = .systemFont(ofSize: 16, weight: .bold)
         title.lineBreakMode = .byWordWrapping
         title.numberOfLines = 2
+        title.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         return title
     }()
     
@@ -44,13 +45,13 @@ class MCMovieCollectionViewCell: UICollectionViewCell {
     private func addConstraints() {
         NSLayoutConstraint.activate([
             title.heightAnchor.constraint(equalToConstant: 70),
-            title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
-            title.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
-            title.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
+            title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            title.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            title.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             imageView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
-            imageView.bottomAnchor.constraint(equalTo: title.topAnchor, constant: -3),
+            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             imageView.rightAnchor.constraint(equalTo: contentView.rightAnchor)
         ])
     }
